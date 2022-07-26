@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  lang ="en"  xmlns:th= "http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Search App</title>
+</head>
+<body>
+
+</br>
+<div style="text-align: center">
+<form action="/result" method="get">
+  <label for="serial">Enter Serial No:</label>
+  <input type="text" id="serial" name="serial" placeholder="Enter Serial Number"><br><br>
+  <input type="submit" value="Search">
+   <input type="reset" value="Clear">
+</form>
+</div >
+<hr>
+<br>
+<br>
+
+<div style="text-align: center">
+
+<h3> Serial No :  </h3>
+
+<h3 th:text="${serialNo}"> Please Search </h3>
+<br>
+<table  border="1px solid black"  style="align-self: center;  margin: 0 auto; border-collapse: collapse;">
+<tr>
+
+<th>
+<h3 style="padding-left: 20px; padding-right:20px"> ASSET_OWNERSHIP   </h3>
+</th>
+<th>
+<h3 style="padding-left: 20px; padding-right:20px"> CITY   </h3>
+</th>
+<th>
+<h3 style="padding-left: 20px; padding-right:20px"> USER_NAME   </h3>
+</th>
+ </tr>
+<tr>
+
+<td>
+<h3 th:text="${assetOwner}"></h3>
+</td>
+<td>
+<h3 th:text="${city}"></h3>
+</td>
+<td>
+<h3 th:text="${userName}"></h3>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
